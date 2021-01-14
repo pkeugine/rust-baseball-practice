@@ -10,7 +10,7 @@ List Of Features:
     - [x] validate quantity (3)
     - [x] validate integer
     - [x] validate positive
-    - [ ] validate range 1 ~ 9
+    - [x] validate range 1 ~ 9 -> automatically validated
     - [ ] validate no duplicate
     
 - [ ] compare user's numbers and computer's numbers
