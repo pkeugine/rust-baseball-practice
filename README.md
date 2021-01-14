@@ -3,10 +3,10 @@
 Implementing baseball game with Rust.
 
 List Of Features:
-- [ ] generate computer's numbers
+- [x] generate computer's numbers
 - [x] ask user's numbers
     
-- [ ] get user input
+- [x] get user input
     - [ ] validate quantity (3)
     - [ ] validate integer
     - [ ] validate positive
