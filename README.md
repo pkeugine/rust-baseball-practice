@@ -7,7 +7,7 @@ List Of Features:
 - [x] ask user's numbers
     
 - [x] get user input
-    - [ ] validate quantity (3)
+    - [x] validate quantity (3)
     - [ ] validate integer
     - [ ] validate positive
     - [ ] validate range 1 ~ 9

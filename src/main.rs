@@ -21,5 +21,23 @@ fn main() {
 
     io::stdin().read_line(&mut guess).expect("Invalid Input");
 
+    let mut user_numbers = Vec::new();
+    for c in guess.trim().chars() {
+        user_numbers.push(c.to_digit(10).unwrap());
+    }
+    // use & to borrow instead of moving ownership
+    for number in &user_numbers {
+        println!("{}", number);
+    }
     println!("You've inserted the number : {}", guess);
+
+    validate_user_numbers_size(user_numbers);
+}
+
+fn validate_user_numbers_size(user_numbers: Vec<u32>) {
+    if user_numbers.len() != 3 {
+        println!("amount of user numbers is not valid");
+    } else {
+        println!("amount of user numbers is valid!");
+    }
 }
