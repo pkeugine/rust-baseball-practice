@@ -20,6 +20,7 @@ fn main() {
     let mut guess = String::new();
 
     io::stdin().read_line(&mut guess).expect("Invalid Input");
+    validate(&*guess);
 
     let mut user_numbers = Vec::new();
     for c in guess.trim().chars() {
@@ -30,14 +31,31 @@ fn main() {
         println!("{}", number);
     }
     println!("You've inserted the number : {}", guess);
-
-    validate_user_numbers_size(user_numbers);
 }
 
-fn validate_user_numbers_size(user_numbers: Vec<u32>) {
-    if user_numbers.len() != 3 {
+fn validate(guess: &str) {
+    let mut temp_numbers = Vec::new();
+    for c in guess.trim().chars() {
+        temp_numbers.push(c);
+    }
+    validate_length(&*temp_numbers);
+    validate_integer(&*temp_numbers);
+
+}
+
+fn validate_length(temp_numbers: &[char]) {
+    if temp_numbers.len() != 3 {
         println!("amount of user numbers is not valid");
     } else {
         println!("amount of user numbers is valid!");
     }
 }
+
+fn validate_integer(temp_numbers: &[char]) {
+    for c in temp_numbers {
+        if !c.is_digit(10) {
+            println!("non-digit input has been found");
+        }
+    }
+}
+
