@@ -41,6 +41,7 @@ fn validate(guess: &str) {
     validate_length(&*temp_numbers);
     validate_integer(&*temp_numbers);
     validate_positive(&*temp_numbers);
+    validate_no_duplicate(&*temp_numbers);
 }
 
 fn validate_length(temp_numbers: &[char]) {
@@ -62,6 +63,16 @@ fn validate_positive(temp_numbers: &[char]) {
         if c.to_digit(10).unwrap() <= 0 {
             println!("non-positive input has been found");
         }
+    }
+}
+
+fn validate_no_duplicate(temp_numbers: &[char]) {
+    let mut temp_set = HashSet::new();
+    for c in temp_numbers {
+        temp_set.insert(c);
+    }
+    if temp_set.len() < 3 {
+        println!("there are duplicates in input");
     }
 }
 

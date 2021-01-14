@@ -11,7 +11,7 @@ List Of Features:
     - [x] validate integer
     - [x] validate positive
     - [x] validate range 1 ~ 9 -> automatically validated
-    - [ ] validate no duplicate
+    - [x] validate no duplicate
     
 - [ ] compare user's numbers and computer's numbers
     - [ ] check number of balls
