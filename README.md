@@ -9,7 +9,7 @@ List Of Features:
 - [x] get user input
     - [x] validate quantity (3)
     - [x] validate integer
-    - [ ] validate positive
+    - [x] validate positive
     - [ ] validate range 1 ~ 9
     - [ ] validate no duplicate
     

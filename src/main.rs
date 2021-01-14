@@ -40,14 +40,12 @@ fn validate(guess: &str) {
     }
     validate_length(&*temp_numbers);
     validate_integer(&*temp_numbers);
-
+    validate_positive(&*temp_numbers);
 }
 
 fn validate_length(temp_numbers: &[char]) {
     if temp_numbers.len() != 3 {
         println!("amount of user numbers is not valid");
-    } else {
-        println!("amount of user numbers is valid!");
     }
 }
 
@@ -55,6 +53,14 @@ fn validate_integer(temp_numbers: &[char]) {
     for c in temp_numbers {
         if !c.is_digit(10) {
             println!("non-digit input has been found");
+        }
+    }
+}
+
+fn validate_positive(temp_numbers: &[char]) {
+    for c in temp_numbers {
+        if c.to_digit(10).unwrap() <= 0 {
+            println!("non-positive input has been found");
         }
     }
 }
